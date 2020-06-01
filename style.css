@@ -1,0 +1,34 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    position: relative;
+}
+
+.game {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+
+    background-image: url(/Img/meadow.jpg.jpg);
+    background-size: cover;
+}
+
+.you {
+    height: 10vh;
+    width: 10vw;
+    position: absolute;
+    top: 80%;
+    left: 2%;
+
+}
+
+.you img {
+    width: 100%;
+}
