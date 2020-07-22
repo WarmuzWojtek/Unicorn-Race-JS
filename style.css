@@ -16,7 +16,7 @@ header {
   top: 20%;
   transform: translateX(-50%);
   height: 25vh;
-  font-size: 7vh;
+
   text-align: center;
   text-transform: uppercase;
   width: 70vw;
@@ -24,10 +24,9 @@ header {
   border: 5px solid;
   border-color: white;
   border-radius: 5px;
-  font-family: "Carter One", cursive;
   box-shadow: 0 0 10px 10px whitesmoke;
   z-index: 1;
-  background-image: linear-gradient(lime, orange);
+  background-image: linear-gradient(green, orange);
   animation: headerBorder 2s infinite alternate;
   transition: 0.3s;
 }
@@ -111,6 +110,20 @@ header img.left {
 header img.right {
   left: 72%;
 }
+header p {
+  position: absolute;
+  left: 50%;
+  top: 5%;
+  transform: translate(-50%, 0);
+  font-family: "Carter One", cursive;
+  font-size: 7vh;
+  transition: 0.3s;
+}
+.activeHeaderP {
+  transform: translate(-50%, 15%);
+  font-size: 9vh;
+  letter-spacing: 5px;
+}
 
 .game {
   position: absolute;
@@ -138,6 +151,65 @@ header img.right {
 
 .hide {
   display: none;
+}
+section.gameMode {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: space-around;
+  position: absolute;
+  left: 50%;
+  top: 55%;
+  transform: translate(-50%, -50%) scale(0);
+  width: 40vw;
+  height: 40vh;
+  border: 5px solid white;
+  border-radius: 5px;
+  background-image: linear-gradient(blue, cadetblue);
+  z-index: 1;
+  transition: 0.3s;
+}
+.active {
+  transform: translate(-50%, -50%) scale(1);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: space-around;
+  position: absolute;
+  left: 50%;
+  top: 55%;
+  width: 40vw;
+  height: 40vh;
+  border: 5px solid white;
+  box-shadow: 0 0 5px 5px white;
+  border-radius: 5px;
+  background-image: linear-gradient(blue, cadetblue);
+  z-index: 1;
+  transition: 0.3s;
+}
+.active h1 {
+  width: 100%;
+  height: 10vh;
+  text-transform: uppercase;
+  font-size: 6vh;
+  line-height: 10vh;
+  text-align: center;
+  font-family: "Carter One", cursive;
+}
+.active button {
+  width: 15vw;
+  height: 10vh;
+  font-family: "Carter One", cursive;
+  border-radius: 50%;
+  border: 3px solid black;
+  background-color: white;
+  font-size: 2.5vh;
+  transition: 0.2s;
+}
+.active button:hover {
+  background-color: cadetblue;
+  color: white;
+  border-color: blue;
 }
 
 section.chooseRunner {
