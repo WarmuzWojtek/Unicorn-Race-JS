@@ -1,34 +1,179 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    height: 100vh;
-    position: relative;
+  height: 100vh;
+  position: relative;
+}
+
+header {
+  margin: 0 auto;
+  position: absolute;
+  left: 50%;
+  top: 20%;
+  transform: translateX(-50%);
+  height: 25vh;
+  font-size: 7vh;
+  text-align: center;
+  text-transform: uppercase;
+  width: 70vw;
+  color: white;
+  border: 5px solid;
+  border-color: white;
+  border-radius: 5px;
+  font-family: "Carter One", cursive;
+  box-shadow: 0 0 10px 10px whitesmoke;
+  z-index: 1;
+  background-image: linear-gradient(lime, orange);
+  animation: headerBorder 2s infinite alternate;
+  transition: 0.3s;
+}
+.activeHeader {
+  top: 0%;
+  transform: translateX(-50%);
+  height: 20vh;
+  width: 100vw;
+}
+
+@keyframes headerBorder {
+  0% {
+    border-color: white;
+  }
+  10% {
+    border-color: yellow;
+  }
+  20% {
+    border-color: orange;
+  }
+  30% {
+    border-color: red;
+  }
+  40% {
+    border-color: palevioletred;
+  }
+  50% {
+    border-color: white;
+  }
+  60% {
+    border-color: cadetblue;
+  }
+  70% {
+    border-color: darkblue;
+  }
+  80% {
+    border-color: grey;
+  }
+  90% {
+    border-color: magenta;
+  }
+  100% {
+    border-color: mediumslateblue;
+  }
+}
+
+button.init {
+  position: absolute;
+  text-align: center;
+  left: 50%;
+  top: 60%;
+  transform: translateX(-50%);
+  width: 15vw;
+  height: 7vh;
+  border: 5px dotted blue;
+  border-radius: 5px;
+  animation: headerBorder 2s 1s infinite alternate;
+  background-color: blueviolet;
+  color: white;
+  font-size: 3.5vh;
+  text-transform: uppercase;
+}
+button.init:hover {
+  animation: none;
+  background-color: violet;
+  color: black;
+  font-weight: bold;
+  border: 5px solid black;
+  letter-spacing: 1px;
+}
+header img {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30vh;
+  height: 25vh;
+}
+header img.left {
+  left: 5%;
+}
+header img.right {
+  left: 72%;
 }
 
 .game {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100vw;
-    height: 100vh;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
 
-    background-image: url(/Img/meadow.jpg.jpg);
-    background-size: cover;
+  background-image: url(/Img/meadow.jpg.jpg);
+  background-size: 100%;
+  background-position: 0% 30%;
 }
 
 .you {
-    height: 10vh;
-    width: 10vw;
-    position: absolute;
-    top: 80%;
-    left: 0%;
-
+  height: 10vh;
+  width: 10vw;
+  position: absolute;
+  top: 80%;
+  left: 0%;
 }
 
 .you img {
-    width: 100%;
+  width: 100%;
+}
+
+.hide {
+  display: none;
+}
+
+section.chooseRunner {
+  display: none;
+  /* display: flex; */
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: space-around;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 60vw;
+  height: 60vh;
+  border: 5px solid white;
+  border-radius: 5px;
+  background-image: linear-gradient(blue, cadetblue);
+  z-index: 1;
+}
+
+section.chooseRunner h1 {
+  width: 100%;
+  height: 8vh;
+  font-size: 6vh;
+  line-height: 8vh;
+  color: white;
+  text-align: center;
+  /* margin: 2vh 0 2vh 0; */
+}
+
+section.chooseRunner div {
+  width: 30%;
+  height: 35vh;
+  background-color: lightblue;
+}
+
+section.chooseRunner div img {
+  width: 100%;
 }

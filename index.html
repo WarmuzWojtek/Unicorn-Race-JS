@@ -1,24 +1,48 @@
 <!DOCTYPE html>
 <html lang="pl">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Unicorn race</title>
-    <link rel="stylesheet" href="/style.css">
-</head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Carter+One&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/style.css" />
+  </head>
 
-<body>
+  <body>
     <div class="wrap"></div>
-    <header>Unicorn race</header>
+    <header>
+      <p>Unicorn race</p>
+      <button class="init">Zagraj!</button>
+      <img src="/Img/runningUnicorn.png" alt="" class="left" />
+      <img src="/Img/runningUnicorn.png" alt="" class="right" />
+    </header>
+    <section class="gameMode hide">
+      <h1>wybierz tryb gry</h1>
+      <div class="timeTrial"></div>
+      <div class="chalenge"></div>
+    </section>
+    <section class="chooseRunner">
+      <h1>Wybierz swojego zawodnika</h1>
+      <div class="white">
+        <img src="/Img/runner.png.png" alt="" />
+      </div>
+      <div class="blue">
+        <img src="/Img/blueRunner.png" alt="" />
+      </div>
+      <div class="red">
+        <img src="/Img/redRunner.png" alt="" />
+      </div>
+    </section>
     <section class="game">
-        <div class="you">
-            <img src="/Img/runner.png.png" alt="">
-        </div>
-        <div class="start">start</div>
-        <div class="stop">meta</div>
+      <div class="you">
+        <img src="/Img/runner.png.png" alt="" />
+      </div>
+      <div class="start">start</div>
+      <div class="stop">meta</div>
     </section>
     <script src="/main.js"></script>
-</body>
-
+  </body>
 </html>
