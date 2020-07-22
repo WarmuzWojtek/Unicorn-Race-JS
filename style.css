@@ -249,3 +249,25 @@ section.chooseRunner div {
 section.chooseRunner div img {
   width: 100%;
 }
+.counter {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%) scale(1);
+  height: 100vh;
+  width: 100vh;
+  line-height: 100vh;
+  text-align: center;
+  font-family: "Carter One", cursive;
+  font-size: 90vh;
+  z-index: 0;
+  animation: counter 1s infinite;
+}
+@keyframes counter {
+  from {
+    transform: translateX(-50%) scale(1);
+  }
+  to {
+    transform: translateX(-50%) scale(0);
+  }
+}
