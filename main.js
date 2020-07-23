@@ -24,18 +24,93 @@ const initFunction = () => {
   gameMode.classList.add("active");
 };
 
-const countFunction = () => {
-  if (countNumber > 0) {
-    divCounter.textContent = countNumber;
-    countNumber--;
-  } else {
-    clearInterval(myInterval);
-  }
-};
+// const countFunction = () => {
+//   if (countNumber > 0) {
+//     divCounter.textContent = countNumber;
+//     divCounter.animate(
+//       [
+//         // keyframes
+//         { transform: "translateX(-50%) scale(1)" },
+//         { transform: "translateX(-50%) scale(0)" },
+//       ],
+//       {
+//         // timing options
+//         duration: 1000,
+
+//         // iterations: Infinity
+//       }
+//     );
+
+//     countNumber--;
+//   } else {
+//     divCounter.textContent = "START!!!";
+//     divCounter.style.fontSize = "10vh";
+//     divCounter.style.top = "-10%";
+//     divCounter.animate(
+//       [
+//         // keyframes
+//         { opacity: 1 },
+//         { opacity: 0 },
+//       ],
+//       {
+//         // timing options
+//         duration: 1000,
+
+//         iterations: 1,
+//       }
+//     );
+
+//     clearInterval(myInterval);
+//     // divCounter.textContent = "START";
+//   }
+// };
 
 const timeTrialFunction = () => {
   gameMode.classList.remove("active");
   gameMode.classList.add("gameMode");
+  divCounter.style.display = "block";
+  const countFunction = () => {
+    if (countNumber > 0) {
+      divCounter.textContent = countNumber;
+      divCounter.animate(
+        [
+          // keyframes
+          { transform: "translateX(-50%) scale(1)" },
+          { transform: "translateX(-50%) scale(0)" },
+        ],
+        {
+          // timing options
+          duration: 1000,
+
+          // iterations: Infinity
+        }
+      );
+
+      countNumber--;
+    } else {
+      divCounter.textContent = "START!!!";
+      divCounter.style.fontSize = "10vh";
+      divCounter.style.top = "-10%";
+      divCounter.animate(
+        [
+          // keyframes
+          { opacity: 1 },
+          { opacity: 0 },
+        ],
+        {
+          // timing options
+          duration: 1000,
+
+          iterations: 1,
+        }
+      );
+      setTimeout(() => {
+        divCounter.style.display = "none";
+      }, 1000);
+      clearInterval(myInterval);
+    }
+  };
+
   const myInterval = setInterval(countFunction, 1000);
   //       if (divCounter.textContent === 1) {
   //         clearInterval(myInterval);
