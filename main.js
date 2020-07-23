@@ -9,13 +9,23 @@ let countNumber = 3;
 const runner = document.querySelector(".you");
 let position = 0;
 
-const raceFunction = (e) => {
+// const raceFunction = (e) => {
+//   e.preventDefault();
+//   if (e.keyCode === 32) {
+//     console.log("działa");
+//     runner.style.left = `${position}%`;
+//     position++;
+//   }
+// };
+
+function raceFunction(e) {
+  e.preventDefault();
   if (e.keyCode === 32) {
     console.log("działa");
     runner.style.left = `${position}%`;
     position++;
   }
-};
+}
 
 // function for initButton
 const initFunction = () => {
@@ -70,6 +80,7 @@ const timeTrialFunction = () => {
         divCounter.style.display = "none";
       }, 1000);
       clearInterval(myInterval);
+      window.addEventListener("keyup", raceFunction);
     }
   };
 
@@ -78,4 +89,4 @@ const timeTrialFunction = () => {
 
 initButton.addEventListener("click", initFunction);
 timeTrialBtn.addEventListener("click", timeTrialFunction);
-window.addEventListener("keyup", raceFunction);
+// window.addEventListener("keyup", raceFunction);
