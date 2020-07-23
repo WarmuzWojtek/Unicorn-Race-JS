@@ -5,18 +5,13 @@ const gameMode = document.querySelector(".gameMode");
 const timeTrialBtn = document.querySelector(".timeTrial");
 const chalengeBtn = document.querySelector(".chalenge");
 const divCounter = document.querySelector(".counter");
+const startLine = document.querySelector(".start");
+const stopLine = document.querySelector(".stop");
 let countNumber = 3;
 const runner = document.querySelector(".you");
 let position = 0;
 
-// const raceFunction = (e) => {
-//   e.preventDefault();
-//   if (e.keyCode === 32) {
-//     console.log("działa");
-//     runner.style.left = `${position}%`;
-//     position++;
-//   }
-// };
+// running function declaration
 
 function raceFunction(e) {
   e.preventDefault();
@@ -41,6 +36,44 @@ const timeTrialFunction = () => {
   gameMode.classList.remove("active");
   gameMode.classList.add("gameMode");
   divCounter.style.display = "block";
+  startLine.animate(
+    [
+      // keyframes
+      { opacity: 0 },
+      { opacity: 1 },
+    ],
+    {
+      // timing options
+      duration: 4000,
+    }
+  );
+  startLine.style.opacity = 1;
+
+  stopLine.animate(
+    [
+      // keyframes
+      { opacity: 0 },
+      { opacity: 1 },
+    ],
+    {
+      // timing options
+      duration: 4000,
+    }
+  );
+  stopLine.style.opacity = 1;
+
+  runner.animate(
+    [
+      // keyframes
+      { opacity: 0 },
+      { opacity: 1 },
+    ],
+    {
+      // timing options
+      duration: 4000,
+    }
+  );
+  runner.style.opacity = 1;
   const countFunction = () => {
     if (countNumber > 0) {
       divCounter.textContent = countNumber;
