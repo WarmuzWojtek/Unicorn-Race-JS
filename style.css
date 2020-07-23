@@ -10,6 +10,7 @@ body {
 }
 .wrap {
   overflow: hidden;
+  max-height: 100vh;
 }
 
 header {
@@ -139,6 +140,36 @@ header p {
   background-size: 100%;
   background-position: 0% 30%;
 }
+.start {
+  position: absolute;
+  left: 3%;
+  bottom: 15vh;
+  height: 1vw;
+  width: 30vh;
+  background-color: indigo;
+  color: white;
+  font-size: 0.8vw;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  border-radius: 25%;
+  transform: rotate(90deg);
+}
+.stop {
+  position: absolute;
+  left: 85%;
+  bottom: 15vh;
+  height: 1vw;
+  width: 30vh;
+  background-color: indigo;
+  color: white;
+  font-size: 0.8vw;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  border-radius: 25%;
+  transform: rotate(90deg);
+}
 
 .you {
   height: 10vh;
@@ -266,13 +297,4 @@ section.chooseRunner div img {
   font-size: 50vh;
   z-index: 0;
   opacity: 1;
-  /* animation: counter 1s infinite; */
-}
-@keyframes counter {
-  from {
-    transform: translateX(-50%) scale(1);
-  }
-  to {
-    transform: translateX(-50%) scale(0);
-  }
 }
