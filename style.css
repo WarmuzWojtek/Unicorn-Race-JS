@@ -129,6 +129,8 @@ header p {
   letter-spacing: 5px;
 }
 
+/* plansza gry */
+
 .game {
   position: absolute;
   left: 0;
@@ -189,6 +191,8 @@ header p {
 .hide {
   display: none;
 }
+
+/* wybór trybu gry */
 section.gameMode {
   display: flex;
   flex-wrap: wrap;
@@ -249,6 +253,8 @@ section.gameMode {
   border-color: blue;
 }
 
+/* wybór zawodnika */
+
 section.chooseRunner {
   display: none;
   /* display: flex; */
@@ -286,6 +292,7 @@ section.chooseRunner div {
 section.chooseRunner div img {
   width: 100%;
 }
+/* odliczanie */
 .counter {
   display: none;
   position: absolute;
@@ -300,4 +307,27 @@ section.chooseRunner div img {
   font-size: 50vh;
   z-index: 0;
   opacity: 1;
+}
+/* stoper */
+
+.timer {
+  margin: 0 auto;
+  position: absolute;
+  left: 15%;
+  top: 30%;
+  transform: translateX(-50%);
+  height: 15vh;
+
+  text-align: center;
+  text-transform: uppercase;
+  width: 20vw;
+  color: white;
+  border: 5px solid;
+  border-color: white;
+  border-radius: 5px;
+  box-shadow: 0 0 10px 10px whitesmoke;
+  z-index: 1;
+  background-image: linear-gradient(mediumblue, lightblue);
+  animation: headerBorder 2s 1s infinite alternate;
+  transition: 0.3s;
 }
