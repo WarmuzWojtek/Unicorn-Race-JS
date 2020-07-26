@@ -317,7 +317,7 @@ section.chooseRunner div img {
   top: 30%;
   transform: translateX(-50%);
   height: 15vh;
-
+  line-height: 15vh;
   text-align: center;
   text-transform: uppercase;
   width: 20vw;
@@ -330,4 +330,5 @@ section.chooseRunner div img {
   background-image: linear-gradient(mediumblue, lightblue);
   animation: headerBorder 2s 1s infinite alternate;
   transition: 0.3s;
+  font-size: 7vh;
 }

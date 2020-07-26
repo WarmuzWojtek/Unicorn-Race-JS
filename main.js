@@ -9,16 +9,67 @@ const startLine = document.querySelector(".start");
 const stopLine = document.querySelector(".stop");
 let countNumber = 3;
 const runner = document.querySelector(".you");
+const divTimer = document.querySelector(".timer");
 let position = 0;
+
+// timer jako interwał
+
+// let ms = 0;
+// let s = 0;
+// let m = 0;
+// let run;
+
+// const timer = () => {
+//   ms++;
+//   if (ms === 100) {
+//     ms = 0;
+//     s++;
+//     if (s === 60) {
+//       s = 0;
+//       m++;
+//     }
+//   }
+
+//   const sec = s <= 9 ? "0" + s : s;
+//   const msec = ms <= 9 ? "0" + ms : ms;
+//   const min = m <= 9 ? "0" + m : m;
+
+//   divTimer.textContent = `${min}:${sec}:${msec}`;
+// };
+
+// function runFunction() {
+//   run = setInterval(timer, 10);
+// }
+
+// dotąd
+
+// timer z użyciem Date obj
+function runFunction() {
+  const date = new Date();
+  const startTime = date.getTime();
+
+  const timer = () => {
+    let currentDate = new Date();
+    let currentTime = currentDate.getTime();
+    let time = ((currentTime - startTime) / 1000).toFixed(2);
+    divTimer.textContent = time < 10 ? "0" + time : time;
+  };
+
+  run = setInterval(timer, 10);
+}
 
 // running function declaration
 
 function raceFunction(e) {
   e.preventDefault();
-  if (e.keyCode === 32) {
-    console.log("działa");
-    runner.style.left = `${position}%`;
-    position++;
+
+  if (position < 85) {
+    if (e.keyCode === 32) {
+      runner.style.left = `${position}%`;
+      position++;
+    }
+  } else {
+    clearInterval(run);
   }
 }
 
@@ -113,6 +164,8 @@ const timeTrialFunction = () => {
         divCounter.style.display = "none";
       }, 1000);
       clearInterval(myInterval);
+
+      runFunction();
       window.addEventListener("keyup", raceFunction);
     }
   };
