@@ -313,8 +313,8 @@ section.chooseRunner div img {
 .timer {
   margin: 0 auto;
   position: absolute;
-  left: 15%;
-  top: 30%;
+  left: 50%;
+  top: 40%;
   transform: translateX(-50%);
   height: 15vh;
   line-height: 15vh;
@@ -322,13 +322,15 @@ section.chooseRunner div img {
   text-transform: uppercase;
   width: 20vw;
   color: white;
-  border: 5px solid;
+  /* border: 5px solid;
   border-color: white;
-  border-radius: 5px;
-  box-shadow: 0 0 10px 10px whitesmoke;
-  z-index: 1;
-  background-image: linear-gradient(mediumblue, lightblue);
+  border-radius: 5px; */
+  /* box-shadow: 0 0 10px 10px whitesmoke; */
+  z-index: 0;
+
+  /* background-image: linear-gradient(mediumblue, lightblue); */
   animation: headerBorder 2s 1s infinite alternate;
   transition: 0.3s;
-  font-size: 7vh;
+  font-size: 10vh;
+  /* font-family: "Carter One", cursive; */
 }

@@ -63,13 +63,14 @@ function runFunction() {
 function raceFunction(e) {
   e.preventDefault();
 
-  if (position < 85) {
+  if (position < 90) {
     if (e.keyCode === 32) {
       runner.style.left = `${position}%`;
       position++;
+      if (position === 85) {
+        clearInterval(run);
+      }
     }
-  } else {
-    clearInterval(run);
   }
 }
 
