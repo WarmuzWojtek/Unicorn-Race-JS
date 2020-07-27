@@ -334,3 +334,36 @@ section.chooseRunner div img {
   font-size: 10vh;
   /* font-family: "Carter One", cursive; */
 }
+.score {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: center;
+  position: absolute;
+  left: 50%;
+  top: 55%;
+  transform: translate(-50%, -50%) scale(0);
+  width: 40vw;
+  height: 40vh;
+  border: 10px solid white;
+  border-radius: 5px;
+  text-align: center;
+  background-image: linear-gradient(blue, cadetblue);
+  z-index: 1;
+  transition: 0.3s;
+}
+.activescore {
+  transform: translate(-50%, -50%) scale(1);
+  transition: 0.5s;
+  animation: headerBorder 2s 1s infinite alternate;
+  font-size: 7vh;
+}
+
+.score input {
+  width: 20vw;
+  height: 8vh;
+  margin: 0 auto;
+  font-size: 5vh;
+  padding-left: 1vw;
+}

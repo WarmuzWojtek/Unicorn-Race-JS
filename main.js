@@ -10,6 +10,8 @@ const stopLine = document.querySelector(".stop");
 let countNumber = 3;
 const runner = document.querySelector(".you");
 const divTimer = document.querySelector(".timer");
+const score = document.querySelector(".score");
+const yourScore = document.querySelector("div.score h1");
 let position = 0;
 
 // timer jako interwał
@@ -69,6 +71,8 @@ function raceFunction(e) {
       position++;
       if (position === 85) {
         clearInterval(run);
+        score.classList.add("activescore");
+        yourScore.textContent = divTimer.textContent;
       }
     }
   }
