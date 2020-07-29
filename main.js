@@ -126,6 +126,7 @@ function raceFunction(e) {
       if (position === 85) {
         clearInterval(run);
         score.classList.add("activescores");
+        playerName.value = "";
         yourScore.textContent = divTimer.textContent;
         playerName.addEventListener("change", highScoresFunction);
       }
