@@ -10,9 +10,63 @@ const stopLine = document.querySelector(".stop");
 let countNumber = 3;
 const runner = document.querySelector(".you");
 const divTimer = document.querySelector(".timer");
-const score = document.querySelector(".score");
+const score = document.querySelector(".scores");
+const score1 = document.querySelector(".score");
+const score2 = document.querySelector(".highscores");
 const yourScore = document.querySelector("div.score h1");
 let position = 0;
+const playerName = document.querySelector(".score input");
+const place1 = document.querySelector(".first");
+const place2 = document.querySelector(".second");
+const place3 = document.querySelector(".third");
+const place4 = document.querySelector(".fourth");
+const place5 = document.querySelector(".fifth");
+let newScore;
+
+let highScores = [
+  {
+    name: "Hila",
+    score: "45.12",
+  },
+  {
+    name: "Hela",
+    score: "20.20",
+  },
+  {
+    name: "Hercia",
+    score: "25.56",
+  },
+  {
+    name: "Holly",
+    score: "34.56",
+  },
+  {
+    name: "Hola",
+    score: "33.14",
+  },
+];
+
+// funkcja zapisywania najlepszych wyników
+const highScoresFunction = (e) => {
+  score1.classList.add("hide");
+  newScore = { name: e.target.value, score: yourScore.textContent };
+  function compare(a, b) {
+    if (a.score < b.score) {
+      return -1;
+    }
+    if (a.score > b.score) {
+      return 1;
+    }
+    return 0;
+  }
+  highScores.push(newScore);
+  let newHighScores = highScores.sort(compare);
+  place1.textContent = `1. ${newHighScores[0].name} czas ${newHighScores[0].score}`;
+  place2.textContent = `2. ${newHighScores[1].name} czas ${newHighScores[1].score}`;
+  place3.textContent = `3. ${newHighScores[2].name} czas ${newHighScores[2].score}`;
+  place4.textContent = `4. ${newHighScores[3].name} czas ${newHighScores[3].score}`;
+  place5.textContent = `5. ${newHighScores[4].name} czas ${newHighScores[4].score}`;
+};
 
 // timer jako interwał
 
@@ -71,8 +125,9 @@ function raceFunction(e) {
       position++;
       if (position === 85) {
         clearInterval(run);
-        score.classList.add("activescore");
+        score.classList.add("activescores");
         yourScore.textContent = divTimer.textContent;
+        playerName.addEventListener("change", highScoresFunction);
       }
     }
   }
