@@ -138,7 +138,7 @@ header p {
   width: 100vw;
   height: 100vh;
 
-  background-image: url(/Img/coast.jpg);
+  background-image: url(/Img/green-grass-field-under-white-clouds-1048039.jpg);
   background-size: 100%;
   background-position: 0% 30%;
 }
@@ -318,10 +318,13 @@ section.chooseRunner div img {
   transform: translateX(-50%);
   height: 15vh;
   line-height: 15vh;
-  text-align: center;
+  text-align: justify;
   text-transform: uppercase;
   width: 20vw;
-  color: white;
+  color: black;
+  /* padding-left: 20vw; */
+  font-family: "Carter One", cursive;
+  /* font-family: "Orbitron", sans-serif; */
   /* border: 5px solid;
   border-color: white;
   border-radius: 5px; */
@@ -352,6 +355,7 @@ section.chooseRunner div img {
   background-image: linear-gradient(blue, cadetblue);
   z-index: 1;
   transition: 0.3s;
+  font-family: "Carter One", cursive;
 }
 .activescores {
   transform: translate(-50%, -50%) scale(1);
@@ -380,14 +384,14 @@ section.chooseRunner div img {
 }
 .highscores {
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   flex-wrap: wrap;
   justify-content: space-around;
   align-content: center;
   position: absolute;
   left: 0;
   top: 0;
-  transform: scale(1);
+  transform: scale(0);
   width: 40vw;
   height: 40vh;
   /* border: 10px solid white;
@@ -396,6 +400,10 @@ section.chooseRunner div img {
   /* background-image: linear-gradient(blue, cadetblue); */
   z-index: 1;
   transition: 0.3s;
+  color: white;
+}
+.activehighscores {
+  transform: scale(1);
 }
 
 .score input {
@@ -409,8 +417,38 @@ section.chooseRunner div img {
 .score.hide {
   display: none;
 }
+.highscores h2 {
+  width: 100%;
+  text-align: center;
+  line-height: 5vh;
+  font-size: 4vh;
+  margin: 1vh 0 2vh 0;
+}
 .highscores p {
-  width: 20vw;
-  height: 10vh;
-  font-size: 3vh;
+  width: 100%;
+  height: 3.5vh;
+  line-height: 3.5vh;
+  font-size: 2.5vh;
+  margin-bottom: 2vh;
+}
+.newTrial,
+.reload {
+  position: absolute;
+  top: 70%;
+  left: 5%;
+  background-color: transparent;
+  border: 2px solid white;
+  width: 10vw;
+  height: 6vh;
+  font-size: 2vh;
+  color: white;
+  transition: 0.2s;
+}
+.reload {
+  left: 70%;
+}
+.newTrial:hover,
+.reload:hover {
+  background-color: white;
+  color: blue;
 }

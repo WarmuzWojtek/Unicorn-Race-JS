@@ -66,6 +66,7 @@ const highScoresFunction = (e) => {
   place3.textContent = `3. ${newHighScores[2].name} czas ${newHighScores[2].score}`;
   place4.textContent = `4. ${newHighScores[3].name} czas ${newHighScores[3].score}`;
   place5.textContent = `5. ${newHighScores[4].name} czas ${newHighScores[4].score}`;
+  score2.classList.add("activehighscores");
 };
 
 // timer jako interwał
