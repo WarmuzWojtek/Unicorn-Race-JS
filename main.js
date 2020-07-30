@@ -21,6 +21,8 @@ const place2 = document.querySelector(".second");
 const place3 = document.querySelector(".third");
 const place4 = document.querySelector(".fourth");
 const place5 = document.querySelector(".fifth");
+const reTimeTrialBtn = document.querySelector(".newTrial");
+const restartBtn = document.querySelector(".restart");
 let newScore;
 
 let highScores = [
@@ -46,6 +48,20 @@ let highScores = [
   },
 ];
 
+const reTimeTrialFn = () => {
+  score.classList.remove("activescores");
+  score1.classList.remove("hide");
+  divCounter.style.display = "block";
+  countNumber = 3;
+  position = 0;
+  divCounter.style.fontSize = "50vh";
+  divCounter.style.top = "0";
+  divCounter.textContent = "";
+  divTimer.textContent = "";
+  score2.classList.remove("activehighscores");
+  timeTrialFunction();
+};
+
 // funkcja zapisywania najlepszych wyników
 const highScoresFunction = (e) => {
   score1.classList.add("hide");
@@ -67,6 +83,7 @@ const highScoresFunction = (e) => {
   place4.textContent = `4. ${newHighScores[3].name} czas ${newHighScores[3].score}`;
   place5.textContent = `5. ${newHighScores[4].name} czas ${newHighScores[4].score}`;
   score2.classList.add("activehighscores");
+  reTimeTrialBtn.addEventListener("click", reTimeTrialFn);
 };
 
 // timer jako interwał
@@ -119,10 +136,10 @@ function runFunction() {
 
 function raceFunction(e) {
   e.preventDefault();
-
+  runner.style.left = `${position}%`;
   if (position < 90) {
     if (e.keyCode === 32) {
-      runner.style.left = `${position}%`;
+      // runner.style.left = `${position}%`;
       position++;
       if (position === 85) {
         clearInterval(run);
