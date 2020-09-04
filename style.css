@@ -314,11 +314,11 @@ section.chooseRunner div img {
   margin: 0 auto;
   position: absolute;
   left: 50%;
-  top: 40%;
-  transform: translateX(-50%);
+  top: 42%;
+  transform: translateX(-40%);
   height: 15vh;
   line-height: 15vh;
-  text-align: justify;
+  text-align: inherit;
   text-transform: uppercase;
   width: 20vw;
   color: black;
@@ -326,7 +326,7 @@ section.chooseRunner div img {
   font-family: "Carter One", cursive;
   /* font-family: "Orbitron", sans-serif; */
   /* border: 5px solid;
-  border-color: white;
+  border-color: white
   border-radius: 5px; */
   /* box-shadow: 0 0 10px 10px whitesmoke; */
   z-index: 0;

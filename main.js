@@ -1,5 +1,6 @@
 const initButton = document.querySelector(".init");
 const header = document.querySelector("header");
+
 const tittle = document.querySelector("header p");
 const gameMode = document.querySelector(".gameMode");
 const timeTrialBtn = document.querySelector(".timeTrial");
@@ -9,6 +10,7 @@ const startLine = document.querySelector(".start");
 const stopLine = document.querySelector(".stop");
 let countNumber = 3;
 const runner = document.querySelector(".you");
+const runnerImg = document.querySelector(".you img");
 const divTimer = document.querySelector(".timer");
 const score = document.querySelector(".scores");
 const score1 = document.querySelector(".score");
@@ -54,6 +56,7 @@ const reTimeTrialFn = () => {
   divCounter.style.display = "block";
   countNumber = 3;
   position = 0;
+  runner.style.left = `${position}%`;
   divCounter.style.fontSize = "50vh";
   divCounter.style.top = "0";
   divCounter.textContent = "";
@@ -137,12 +140,14 @@ function runFunction() {
 function raceFunction(e) {
   e.preventDefault();
   runner.style.left = `${position}%`;
+  runnerImg.src = "/Img/runningUnicorn.png";
   if (position < 90) {
     if (e.keyCode === 32) {
       // runner.style.left = `${position}%`;
       position++;
       if (position === 85) {
         clearInterval(run);
+        runnerImg.src = "/Img/runner.png.png";
         score.classList.add("activescores");
         playerName.value = "";
         yourScore.textContent = divTimer.textContent;
