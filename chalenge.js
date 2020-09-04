@@ -1,10 +1,21 @@
 const chalengeBtn = document.querySelector(".chalenge");
 const opponent1 = document.querySelector(".opp1");
 const opponent2 = document.querySelector(".opp2");
+const opponent1time = document.querySelector("div.opp1 p");
+const opponent2time = document.querySelector("div.opp2 p");
+
+function showOpponent1Time() {
+  opponent1time.style.opacity = 1;
+}
+function showOpponent2Time() {
+  opponent2time.style.opacity = 1;
+}
 
 const chalengeFn = () => {
-  let opponent1speed = (Math.random() * 8 + 17).toFixed(2);
-  let opponent2speed = (Math.random() * 8 + 17).toFixed(2);
+  let opponent1speed = (Math.random() * 6 + 13).toFixed(2);
+  let opponent2speed = (Math.random() * 6 + 13).toFixed(2);
+  opponent1time.textContent = `${opponent1speed}`;
+  opponent2time.textContent = `${opponent2speed}`;
 
   gameMode.classList.remove("active");
   gameMode.classList.add("gameMode");
@@ -94,6 +105,8 @@ const chalengeFn = () => {
       easing: "ease-in-out",
     }
   );
+  setTimeout(showOpponent1Time, opponent1speed * 1000 + 4000);
+  setTimeout(showOpponent2Time, opponent2speed * 1000 + 4000);
   runner.style.opacity = 1;
   opponent1.style.opacity = 1;
   opponent2.style.opacity = 1;
