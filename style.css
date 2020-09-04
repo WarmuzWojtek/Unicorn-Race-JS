@@ -175,16 +175,26 @@ header p {
   opacity: 0;
 }
 
-.you {
+.you,
+.opp1,
+.opp2 {
   height: 10vh;
   width: 10vw;
   position: absolute;
-  top: 80%;
+  top: 75%;
   left: 0%;
   opacity: 0;
 }
+.opp1 {
+  top: 65%;
+}
+.opp2 {
+  top: 85%;
+}
 
-.you img {
+.you img,
+.opp1 img,
+.opp2 img {
   width: 100%;
 }
 
