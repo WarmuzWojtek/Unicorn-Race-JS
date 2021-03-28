@@ -8,6 +8,7 @@ body {
   height: 100vh;
   position: relative;
 }
+
 .wrap {
   overflow: hidden;
   max-height: 100vh;
@@ -30,10 +31,11 @@ header {
   border-radius: 5px;
   box-shadow: 0 0 10px 10px whitesmoke;
   z-index: 1;
-  background-image: linear-gradient(green, orange);
+  background-image: linear-gradient(rgb(116, 117, 121), rgb(7, 10, 59));
   animation: headerBorder 2s infinite alternate;
   transition: 0.3s;
 }
+
 .activeHeader {
   top: 0%;
   transform: translateX(-50%);
@@ -45,33 +47,43 @@ header {
   0% {
     border-color: white;
   }
+
   10% {
     border-color: yellow;
   }
+
   20% {
     border-color: orange;
   }
+
   30% {
     border-color: red;
   }
+
   40% {
     border-color: palevioletred;
   }
+
   50% {
     border-color: white;
   }
+
   60% {
     border-color: cadetblue;
   }
+
   70% {
     border-color: darkblue;
   }
+
   80% {
     border-color: grey;
   }
+
   90% {
     border-color: magenta;
   }
+
   100% {
     border-color: mediumslateblue;
   }
@@ -93,6 +105,7 @@ button.init {
   font-size: 3.5vh;
   text-transform: uppercase;
 }
+
 button.init:hover {
   animation: none;
   background-color: violet;
@@ -101,6 +114,7 @@ button.init:hover {
   border: 5px solid black;
   letter-spacing: 1px;
 }
+
 header img {
   position: absolute;
   top: 50%;
@@ -108,12 +122,15 @@ header img {
   width: 30vh;
   height: 25vh;
 }
+
 header img.left {
   left: 5%;
 }
+
 header img.right {
   left: 72%;
 }
+
 header p {
   position: absolute;
   left: 50%;
@@ -123,6 +140,7 @@ header p {
   font-size: 7vh;
   transition: 0.3s;
 }
+
 .activeHeaderP {
   transform: translate(-50%, 15%);
   font-size: 9vh;
@@ -138,10 +156,11 @@ header p {
   width: 100vw;
   height: 100vh;
 
-  background-image: url(/Img/green-grass-field-under-white-clouds-1048039.jpg);
+  background-image: url(/Img/planets.jpg);
   background-size: 100%;
-  background-position: 0% 30%;
+  background-position: 0% 80%;
 }
+
 .start {
   position: absolute;
   left: 3%;
@@ -158,6 +177,7 @@ header p {
   transform: rotate(90deg);
   opacity: 0;
 }
+
 .stop {
   position: absolute;
   left: 85%;
@@ -185,9 +205,11 @@ header p {
   left: 0%;
   opacity: 0;
 }
+
 .opp1 {
   top: 65%;
 }
+
 .opp2 {
   top: 85%;
 }
@@ -231,6 +253,7 @@ section.gameMode {
   z-index: 1;
   transition: 0.3s;
 }
+
 .active {
   transform: translate(-50%, -50%) scale(1);
   display: flex;
@@ -249,6 +272,7 @@ section.gameMode {
   z-index: 1;
   transition: 0.3s;
 }
+
 .active h1 {
   width: 100%;
   height: 10vh;
@@ -258,6 +282,7 @@ section.gameMode {
   text-align: center;
   font-family: "Carter One", cursive;
 }
+
 .active button {
   width: 15vw;
   height: 10vh;
@@ -268,6 +293,7 @@ section.gameMode {
   font-size: 2.5vh;
   transition: 0.2s;
 }
+
 .active button:hover {
   background-color: cadetblue;
   color: white;
@@ -313,6 +339,7 @@ section.chooseRunner div {
 section.chooseRunner div img {
   width: 100%;
 }
+
 /* odliczanie */
 .counter {
   display: none;
@@ -329,6 +356,7 @@ section.chooseRunner div img {
   z-index: 0;
   opacity: 1;
 }
+
 /* stoper */
 
 .timer {
@@ -358,6 +386,7 @@ section.chooseRunner div img {
   font-size: 10vh;
   /* font-family: "Carter One", cursive; */
 }
+
 .scores {
   display: flex;
   flex-direction: column;
@@ -378,12 +407,14 @@ section.chooseRunner div img {
   transition: 0.3s;
   font-family: "Carter One", cursive;
 }
+
 .activescores {
   transform: translate(-50%, -50%) scale(1);
   transition: 0.5s;
   animation: headerBorder 2s 1s infinite alternate;
   font-size: 7vh;
 }
+
 .score {
   display: flex;
   flex-direction: column;
@@ -403,6 +434,7 @@ section.chooseRunner div img {
   z-index: 2;
   transition: 0.3s;
 }
+
 .highscores {
   display: flex;
   /* flex-direction: column; */
@@ -423,21 +455,24 @@ section.chooseRunner div img {
   transition: 0.3s;
   color: white;
 }
+
 .activehighscores {
   transform: scale(1);
 }
 
 .score input {
   width: 20vw;
-  height: 7vh;
-  margin: 0 auto;
-  font-size: 5vh;
+  height: 5vh;
+  margin: 2vh auto;
+  font-size: 3vh;
   padding-left: 1vw;
+  border-radius: 10px;
 }
 
 .score.hide {
   display: none;
 }
+
 .highscores h2 {
   width: 100%;
   text-align: center;
@@ -445,6 +480,7 @@ section.chooseRunner div img {
   font-size: 4vh;
   margin: 1vh 0 2vh 0;
 }
+
 .highscores p {
   width: 100%;
   height: 3.5vh;
@@ -452,6 +488,7 @@ section.chooseRunner div img {
   font-size: 2.5vh;
   margin-bottom: 2vh;
 }
+
 .newTrial,
 .reload {
   position: absolute;
@@ -465,9 +502,11 @@ section.chooseRunner div img {
   color: white;
   transition: 0.2s;
 }
+
 .reload {
   left: 70%;
 }
+
 .newTrial:hover,
 .reload:hover {
   background-color: white;
