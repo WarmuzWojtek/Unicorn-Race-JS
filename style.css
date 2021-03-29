@@ -156,7 +156,7 @@ header p {
   width: 100vw;
   height: 100vh;
 
-  background-image: url(/Img/planets.jpg);
+  background-image: url(Img/planets.jpg);
   background-size: 100%;
   background-position: 0% 80%;
 }
