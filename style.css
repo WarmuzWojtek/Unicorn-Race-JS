@@ -342,6 +342,7 @@ section.chooseRunner div img {
 
 /* odliczanie */
 .counter {
+  color:white;
   display: none;
   position: absolute;
   left: 50%;
@@ -370,7 +371,7 @@ section.chooseRunner div img {
   text-align: inherit;
   text-transform: uppercase;
   width: 20vw;
-  color: black;
+  color: white;
   /* padding-left: 20vw; */
   font-family: "Carter One", cursive;
   /* font-family: "Orbitron", sans-serif; */
