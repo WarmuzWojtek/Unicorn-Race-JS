@@ -140,14 +140,14 @@ function runFunction() {
 function raceFunction(e) {
   e.preventDefault();
   runner.style.left = `${position}%`;
-  runnerImg.src = "/Img/runningUnicorn.png";
+  runnerImg.src = "Img/runningUnicorn.png";
   if (position < 90) {
     if (e.keyCode === 32) {
       // runner.style.left = `${position}%`;
       position++;
       if (position === 85) {
         clearInterval(run);
-        runnerImg.src = "/Img/runner.png.png";
+        runnerImg.src = "Img/runner.png.png";
         score.classList.add("activescores");
         playerName.value = "";
         yourScore.textContent = divTimer.textContent;
