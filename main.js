@@ -1,3 +1,5 @@
+
+
 const initButton = document.querySelector(".init");
 const header = document.querySelector("header");
 
@@ -24,7 +26,7 @@ const place3 = document.querySelector(".third");
 const place4 = document.querySelector(".fourth");
 const place5 = document.querySelector(".fifth");
 const reTimeTrialBtn = document.querySelector(".newTrial");
-const restartBtn = document.querySelector(".restart");
+const restartBtn = document.querySelector(".reload");
 let newScore;
 
 let highScores = [
@@ -257,6 +259,11 @@ const timeTrialFunction = () => {
   const myInterval = setInterval(countFunction, 1000);
 };
 
+const reloadFunction=()=>{
+  window.location='/';
+}
+
 initButton.addEventListener("click", initFunction);
 timeTrialBtn.addEventListener("click", timeTrialFunction);
+restartBtn.addEventListener('click', reloadFunction);
 // window.addEventListener("keyup", raceFunction);

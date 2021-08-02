@@ -7,6 +7,8 @@
 body {
   height: 100vh;
   position: relative;
+  width: 100vw;
+  overflow: hidden;
 }
 
 .wrap {
@@ -100,18 +102,20 @@ button.init {
   border: 5px dotted blue;
   border-radius: 5px;
   animation: headerBorder 2s 1s infinite alternate;
-  background-color: blueviolet;
+  background-color: rgb(55, 85, 128);
   color: white;
   font-size: 3.5vh;
   text-transform: uppercase;
+  transition: 0.3s;
+  cursor: pointer;
 }
 
 button.init:hover {
   animation: none;
-  background-color: violet;
-  color: black;
+  background-color: white;
+  color: rgb(55, 85, 128);
   font-weight: bold;
-  border: 5px solid black;
+  border: 5px solid white;
   letter-spacing: 1px;
 }
 
@@ -249,7 +253,7 @@ section.gameMode {
   height: 40vh;
   border: 5px solid white;
   border-radius: 5px;
-  background-image: linear-gradient(blue, cadetblue);
+  background-image: linear-gradient(rgb(100, 134, 167), rgb(55, 85, 128));
   z-index: 1;
   transition: 0.3s;
 }
@@ -266,9 +270,9 @@ section.gameMode {
   width: 40vw;
   height: 40vh;
   border: 5px solid white;
-  box-shadow: 0 0 5px 5px white;
+  box-shadow: 0 0 10px 3px white;
   border-radius: 5px;
-  background-image: linear-gradient(blue, cadetblue);
+  background-image: linear-gradient(rgb(100, 134, 167), rgb(55, 85, 128));
   z-index: 1;
   transition: 0.3s;
 }
@@ -291,13 +295,14 @@ section.gameMode {
   border: 3px solid black;
   background-color: white;
   font-size: 2.5vh;
-  transition: 0.2s;
+  transition: 0.3s;
+  cursor: pointer;
 }
 
 .active button:hover {
-  background-color: cadetblue;
+  background-color: black;
   color: white;
-  border-color: blue;
+
 }
 
 /* wybór zawodnika */
@@ -342,7 +347,7 @@ section.chooseRunner div img {
 
 /* odliczanie */
 .counter {
-  color:white;
+  color: white;
   display: none;
   position: absolute;
   left: 50%;
@@ -389,6 +394,7 @@ section.chooseRunner div img {
 }
 
 .scores {
+  padding: 32px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -399,14 +405,15 @@ section.chooseRunner div img {
   top: 55%;
   transform: translate(-50%, -50%) scale(0);
   width: 40vw;
-  height: 40vh;
+  height: 45vh;
   border: 10px solid white;
   border-radius: 5px;
   text-align: center;
-  background-image: linear-gradient(blue, cadetblue);
+  background-image: linear-gradient(rgb(100, 134, 167), rgb(55, 85, 128));
   z-index: 1;
   transition: 0.3s;
   font-family: "Carter One", cursive;
+
 }
 
 .activescores {
@@ -414,6 +421,8 @@ section.chooseRunner div img {
   transition: 0.5s;
   animation: headerBorder 2s 1s infinite alternate;
   font-size: 7vh;
+  padding: 30px;
+
 }
 
 .score {
@@ -427,7 +436,7 @@ section.chooseRunner div img {
   top: 0;
   /* transform: translate(-50%, -50%) scale(1); */
   width: 40vw;
-  height: 40vh;
+  height: 45vh;
   /* border: 10px solid white;
   border-radius: 5px; */
   text-align: center;
@@ -438,27 +447,28 @@ section.chooseRunner div img {
 
 .highscores {
   display: flex;
-  /* flex-direction: column; */
   flex-wrap: wrap;
   justify-content: space-around;
   align-content: center;
   position: absolute;
   left: 0;
-  top: 0;
+  top: -5%;
   transform: scale(0);
-  width: 40vw;
-  height: 40vh;
-  /* border: 10px solid white;
-  border-radius: 5px; */
+  width: 100%;
+  height: 45vh;
   text-align: center;
-  /* background-image: linear-gradient(blue, cadetblue); */
   z-index: 1;
   transition: 0.3s;
   color: white;
+
 }
 
 .activehighscores {
   transform: scale(1);
+}
+
+.score p {
+  font-size: 20px;
 }
 
 .score input {
@@ -466,6 +476,7 @@ section.chooseRunner div img {
   height: 5vh;
   margin: 2vh auto;
   font-size: 3vh;
+  padding: 1em;
   padding-left: 1vw;
   border-radius: 10px;
 }
@@ -511,5 +522,5 @@ section.chooseRunner div img {
 .newTrial:hover,
 .reload:hover {
   background-color: white;
-  color: blue;
+  color: rgb(55, 85, 128);
 }
