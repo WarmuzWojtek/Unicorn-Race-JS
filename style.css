@@ -221,11 +221,13 @@ header p {
 div.opp1 p,
 div.opp2 p {
   opacity: 0;
+  font-family: "Carter One", cursive;
   position: absolute;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
+  color: white;
   z-index: 2;
 }
 
@@ -469,6 +471,7 @@ section.chooseRunner div img {
 
 .score p {
   font-size: 20px;
+
 }
 
 .score input {

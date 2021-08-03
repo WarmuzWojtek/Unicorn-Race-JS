@@ -232,12 +232,14 @@ const timeTrialFunction = () => {
     } else {
       divCounter.textContent = "START!!!";
       divCounter.style.fontSize = "10vh";
-      divCounter.style.top = "-10%";
+      divCounter.style.top = "-15%";
       divCounter.animate(
         [
           // keyframes
-          { opacity: 1 },
-          { opacity: 0 },
+          // { opacity: 1 },
+          // { opacity: 0 },
+          { opacity: 1, letterSpacing:'normal', },
+          { opacity: 0, letterSpacing:'25px'},
         ],
         {
           // timing options
