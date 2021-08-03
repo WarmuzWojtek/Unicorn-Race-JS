@@ -6,9 +6,12 @@ const opponent2time = document.querySelector("div.opp2 p");
 
 function showOpponent1Time() {
   opponent1time.style.opacity = 1;
+  opponent1.style.left="85%";
+
 }
 function showOpponent2Time() {
   opponent2time.style.opacity = 1;
+  opponent2.style.left="85%";
 }
 
 const chalengeFn = () => {
@@ -79,8 +82,10 @@ const chalengeFn = () => {
       duration: `${opponent1speed}` * 1000,
       easing: "ease-in",
       delay: 4000,
+    
     }
   );
+  // opponent1.style.left = '85%';
   opponent2.animate(
     [
       // keyframes
@@ -131,12 +136,12 @@ const chalengeFn = () => {
     } else {
       divCounter.textContent = "START!!!";
       divCounter.style.fontSize = "10vh";
-      divCounter.style.top = "-20%";
+      divCounter.style.top = "-15%";
       divCounter.animate(
         [
           // keyframes
-          { opacity: 1 },
-          { opacity: 0 },
+          { opacity: 1, letterSpacing:'normal', },
+          { opacity: 0, letterSpacing:'25px'},
         ],
         {
           // timing options
